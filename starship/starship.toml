@@ -1,145 +1,19 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
+# Only show directory + prompt symbol
 format = """
-$os\
-$username\
-[](bg:#2A3136 fg:#1F262B)\
-$directory\
-[](fg:#2A3136 bg:#B07A78)\
-$git_branch\
-$git_status\
-[](fg:#B07A78 bg:#1F262B)\
-$c\
-$elixir\
-$elm\
-$golang\
-$gradle\
-$haskell\
-$java\
-$julia\
-$nodejs\
-$nim\
-$rust\
-$scala\
-[](fg:#1F262B bg:#2A3136)\
-$docker_context\
-[](fg:#2A3136 bg:#1F262B)\
-$time\
-[](fg:#1F262B)\
-\n\
-\n$character
+$directory
+$character
 """
-
-# ---------------- USER ----------------
-[username]
-show_always = true
-style_user = "bg:#1F262B fg:#E6E3DE"
-style_root = "bg:#3A2F2B fg:#E6E3DE"
-format = "[ $user ]($style)"
-disabled = false
-
-# ---------------- OS ----------------
-[os]
-style = "bg:#1F262B fg:#E6E3DE"
-disabled = true
 
 # ---------------- DIRECTORY ----------------
 [directory]
-style = "bg:#2A3136 fg:#E6E3DE"
-format = "[ $path ]($style)"
+style = "fg:#E6E3DE"
+format = "$path"
 truncation_length = 3
 truncation_symbol = "…/"
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-
-# ---------------- GIT ----------------
-[git_branch]
-symbol = ""
-style = "bg:#B07A78 fg:#E6E3DE"
-format = "[ $symbol $branch ]($style)"
-
-[git_status]
-style = "bg:#B07A78 fg:#3A2F2B"
-format = "[ $all_status$ahead_behind ]($style)"
-
-# ---------------- LANGUAGES ----------------
-[c]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[cpp]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[elixir]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[elm]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[golang]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[gradle]
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[haskell]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[java]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[julia]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[nodejs]
-symbol = ""
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[nim]
-symbol = "󰆥 "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[rust]
-symbol = ""
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-[scala]
-symbol = " "
-style = "bg:#1F262B fg:#6A6F72"
-format = "[ $symbol ($version) ]($style)"
-
-# ---------------- DOCKER ----------------
-[docker_context]
-symbol = " "
-style = "bg:#2A3136 fg:#E6E3DE"
-format = "[ $symbol $context ]($style)"
-
-# ---------------- TIME ----------------
-[time]
-disabled = false
-time_format = "%R"
-style = "bg:#1F262B fg:#E6E3DE"
-format = "[  $time ]($style)"
+# ---------------- PROMPT CHARACTER ----------------
+[character]
+success_symbol = "[❯](fg:#B07A78)"
+error_symbol   = "[❯](fg:#CFA3A0)"

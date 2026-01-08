@@ -34,6 +34,25 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# ---- Syntax highlighting colors (your theme) ----
+ZSH_HIGHLIGHT_STYLES[command]="fg=#B07A78"        # commands (cd, ls)
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=#B07A78"
+ZSH_HIGHLIGHT_STYLES[function]="fg=#B07A78"
+
+ZSH_HIGHLIGHT_STYLES[path]="fg=#E6E3DE"
+ZSH_HIGHLIGHT_STYLES[arg]="fg=#E6E3DE"
+
+ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=#E6E3DE"
+
+ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=#CFA3A0,bold"
+ZSH_HIGHLIGHT_STYLES[error]="fg=#CFA3A0,bold"
+
+ZSH_HIGHLIGHT_STYLES[quoted]="fg=#CFA3A0"
+ZSH_HIGHLIGHT_STYLES[string]="fg=#CFA3A0"
+
+ZSH_HIGHLIGHT_STYLES[comment]="fg=#7A7671"
+
+
 # Aliases
 alias ls='ls --color'
 alias vim='nvim'
