@@ -3,15 +3,41 @@
   "spacing": 16, // Gaps between modules (4px)
   "layer": "top",
   // Choose the order of the modules
-  "modules-left": ["hyprland/window"],
-  "modules-center": ["clock"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "group/tray-expander",
     "custom/seperator",
     "pulseaudio",
     "bluetooth",
     "network",
+    "clock"
   ],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "0",
+      "active": "󱓻"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
   "hyprland/window": {
     "format": "{class}",
     "separate-outputs": true,
