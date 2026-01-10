@@ -55,6 +55,7 @@ source "$BASE_DIR/modules/packages-aur.sh"
 source "$BASE_DIR/modules/packages-dev.sh"
 source "$BASE_DIR/modules/zsh.sh"
 source "$BASE_DIR/modules/stow.sh"
+source "$BASE_DIR/modules/bin.sh"
 source "$BASE_DIR/modules/fstab.sh"
 source "$BASE_DIR/modules/ascii.sh"
 source "$BASE_DIR/modules/reboot.sh"
@@ -97,6 +98,12 @@ fi
 # -----------------------------------------------
 info "Applying dotfiles using stow..."
 run_stow
+
+# -----------------------------------------------
+# LOCAL BIN
+# -----------------------------------------------
+info "Linking dotfiles executables..."
+install_local_bin
 
 # -----------------------------------------------
 # FSTAB ENTRY

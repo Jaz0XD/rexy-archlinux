@@ -1,11 +1,4 @@
-pokemon-colorscripts --no-title -s -n pikachu | fastfetch \
-  --logo-type file-raw \
-  --logo-width 12 \
-  --logo-height 14 \
-  --logo-padding-top 4 \
-  --logo-padding-left 1 \
-  --separator " " \
-  --logo -
+fastfetch
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
