@@ -7,7 +7,7 @@ install_aur_packages() {
         notify-send nautilus nwg-look steam neovim openrgb fzf lazygit sddm starship
         sddm-silent-theme zoxide ttf-jetbrains-mono-nerd gamemode lib32-gamemode
         ttf-ibm-plex ttf-roboto noto-fonts spotify spicetify-cli mangohud ttf-gohu-nerd
-        zen-browser-bin ttf-twemoji hyprshot
+        zen-browser-bin ttf-twemoji vesktop hyprshot
     )
 
     local to_install=()
