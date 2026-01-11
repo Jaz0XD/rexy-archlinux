@@ -22,6 +22,7 @@ run_stow() {
     ok "starship stowed successfully."
 
     info "🚀 Stowing starship..."
-    stow --target="$HOME" Pictures
+    mkdir -p "$HOME/Pictures"
+    stow --target="$HOME/Pictures" Pictures
     ok "starship stowed successfully."
 }
