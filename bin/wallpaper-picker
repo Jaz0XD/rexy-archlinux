@@ -66,3 +66,5 @@ awww img "$selected" \
   --transition-type grow \
   --transition-fps 60 \
   --transition-duration 1
+
+  ln -sf "$selected" "$HOME/.current_wallpaper"
