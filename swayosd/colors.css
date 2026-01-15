@@ -1,11 +1,7 @@
-/* Everforest Dark (Medium)
- * Consistent, low-contrast, modern
- */
+@define-color background-color #2b3339;
+@define-color border-color     #445055;
 
-@define-color background-color #2B3339; /* bg0 */
-@define-color border-color     #475258; /* bg3 */
+@define-color label            #d3c6aa;
+@define-color image            #a7c080;
 
-@define-color label            #D3C6AA; /* fg */
-@define-color image            #A7C080; /* green */
-
-@define-color progress         #83C092; /* aqua */
+@define-color progress         #83c092;
