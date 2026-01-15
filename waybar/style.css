@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
   font-family: "JetBrainsMono Nerd Font Propo", "Symbols Nerd Font";
   font-weight: 600;
@@ -5,9 +7,9 @@
 }
 
 #waybar {
-  background-color: #1F262B;
-  border: 1px solid #E6E3DE;
-  color: rgba(255,255,255,0.9);
+  background-color: @bg0;
+  border: 1px solid @grey2;
+  color: @fg;
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -29,6 +31,7 @@ window#waybar {
   padding: 0 6px;
   margin: 0 1.5px;
   min-width: 9px;
+  color: @fg;
 }
 
 #workspaces button.empty {
@@ -38,16 +41,19 @@ window#waybar {
 #mpris,
 #clock {
   background-color: transparent;
+  color: @fg;
 }
 
 #custom-seperator {
   margin: 0 -4px;
   opacity: 0.4;
+  color: @grey0;
 }
 
 /* Expand icon */
 #custom-expand-icon {
   padding-right: 6px;
+  color: @blue;
 }
 
 /* Tray as a whole */
@@ -55,13 +61,15 @@ window#waybar {
   padding: 0 6px;
 }
 
+/* System toggles */
 #custom-brightness,
 #custom-nightlight {
   padding-left: 6px;
   padding-right: 6px;
+  color: @yellow;
 }
+
 #power-profiles-daemon {
   padding-left: 6px;
+  color: @green;
 }
-
-

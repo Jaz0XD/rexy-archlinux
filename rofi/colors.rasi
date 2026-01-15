@@ -1,17 +1,19 @@
 * {
-    /* Dark cool background (from shaded wall / roof) */
-    background:     #1F262BFF; /* bg_main */
-    background-alt: #2A3136FF; /* bg_secondary */
+    /* Dark forest background (main surface) */
+    background:     #2B3339FF; /* bg0 */
 
-    /* Soft petal white (not pure white) */
-    foreground:     #E6E3DEFF; /* fg_primary */
+    /* Slightly lifted background (panels / cards) */
+    background-alt: #323C41FF; /* bg1 */
 
-    /* Dusty blush accent (selection) */
-    selected:       #CFA3A0FF; /* blossom pink */
+    /* Warm parchment foreground (never pure white) */
+    foreground:     #D3C6AAFF; /* fg */
 
-    /* Muted rosewood (active / success) */
-    active:         #B07A78FF; /* muted rose */
+    /* Soft floral accent (selection / focus) */
+    selected:       #D699B6FF; /* purple */
 
-    /* Ink-brown / bark tone (urgent, not alarming) */
-    urgent:         #3A2F2BFF; /* branch brown */
+    /* Natural moss green (active / success) */
+    active:         #A7C080FF; /* green */
+
+    /* Bark-shadow warning (urgent, calm but clear) */
+    urgent:         #7A8478FF; /* grey0 */
 }

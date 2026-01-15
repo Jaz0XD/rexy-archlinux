@@ -4,7 +4,7 @@ window {
     font-family: Fira Code Medium;
     font-size: 16pt;
     color:  @foreground; /* text */
-    background-color: rgba(24, 27, 32, 0.2);
+    background-color: rgba(24, 27, 32, 0.5);
 
 } 
 

@@ -1,0 +1,315 @@
+{
+  "main": {
+    "id": "863e2abee002a6fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f7c1fb9ee62fd26",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1aed34ec024dc5f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 3/PHASE 3.2 - Ability Context Lifetime (Critical).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 3.2 - Ability Context Lifetime (Critical)"
+            }
+          },
+          {
+            "id": "0062ba383137b086",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 3/PHASE 3.3 - Create the Ability Context Object (Plain & Boring).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 3.3 - Create the Ability Context Object (Plain & Boring)"
+            }
+          },
+          {
+            "id": "5594d3714a7eae63",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 3/PHASE 3.4 - Lock Down Immutability (What Can NEVER Change).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 3.4 - Lock Down Immutability (What Can NEVER Change)"
+            }
+          },
+          {
+            "id": "490868de3e4e9e47",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 3/PHASE 3.1 - What Problem Ability Context Solves.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 3.1 - What Problem Ability Context Solves"
+            }
+          },
+          {
+            "id": "4989cc56649ccc9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 4/PHASE 4.1 - Define the Pipeline (Before Writing Any Logic).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 4.1 - Define the Pipeline (Before Writing Any Logic)"
+            }
+          },
+          {
+            "id": "279f5009a294acf6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 4/PHASE 4.2 - Context Creation & Ownership.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 4.2 - Context Creation & Ownership"
+            }
+          },
+          {
+            "id": "ec046f5364127a1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 4/PHASE 4.3 - Validation Stage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 4.3 - Validation Stage"
+            }
+          },
+          {
+            "id": "14c975020e50f98d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 4/PHASE 4.4 — Cost Commitment.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 4.4 — Cost Commitment"
+            }
+          },
+          {
+            "id": "15175ef53921b313",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PHASE 4/PHASE 4.5 — Target Resolution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PHASE 4.5 — Target Resolution"
+            }
+          }
+        ],
+        "currentTab": 8
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a8efa11425847f29",
+    "type": "split",
+    "children": [
+      {
+        "id": "60f14abd22fe3c5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3aa05bf0d1cf6b48",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "fea643e1501ae4d8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5b92d62b72d07bf0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b511e1aa01f6f36f",
+    "type": "split",
+    "children": [
+      {
+        "id": "f524459f90f39bae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "074e15b888f633d9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "PHASE 4/PHASE 4.5 — Target Resolution.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for PHASE 4.5 — Target Resolution"
+            }
+          },
+          {
+            "id": "13e611888a65fc24",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "PHASE 4/PHASE 4.5 — Target Resolution.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from PHASE 4.5 — Target Resolution"
+            }
+          },
+          {
+            "id": "12800d0e0e944185",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4f43724b4a5682c0",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0b6599a9599a2406",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "PHASE 4/PHASE 4.5 — Target Resolution.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of PHASE 4.5 — Target Resolution"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "15175ef53921b313",
+  "lastOpenFiles": [
+    "PHASE 4/PHASE 4.5 — Target Resolution.md",
+    "PHASE 4/PHASE 4.4 — Cost Commitment.md",
+    "PHASE 4/PHASE 4.1 - Define the Pipeline (Before Writing Any Logic).md",
+    "PHASE 4/PHASE 4.3 - Validation Stage.md",
+    "PHASE 4/PHASE 4.2 - Context Creation & Ownership.md",
+    "PHASE 3/PHASE 3.1 - What Problem Ability Context Solves.md",
+    "PHASE 4",
+    "PHASE 3/PHASE 3.5 - Cast Timing Data (What Time Means in a Context).md",
+    "PHASE 3",
+    "PHASE 3.6 -.md",
+    "PHASE 3/PHASE 3.4 - Lock Down Immutability (What Can NEVER Change).md",
+    "PHASE 3/PHASE 3.3 - Create the Ability Context Object (Plain & Boring).md",
+    "PHASE 3/PHASE 3.2 - Ability Context Lifetime (Critical).md"
+  ]
+}
