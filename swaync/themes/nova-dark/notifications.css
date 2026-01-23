@@ -1,9 +1,10 @@
 @define-color text            @fg;
-@define-color background-alt  @bg0;
-@define-color selected        @green;
-@define-color hover           alpha(@selected, .4);
+@define-color background      @bg;
+@define-color background-alt  @bg_alt;
+
+@define-color selected        @nord_blue;
+@define-color hover           alpha(@selected, 0.35);
 @define-color urgent          @red;
-@define-color background      @bg0;
 
 * {
   color: @text;

@@ -1,8 +1,9 @@
 {
-  "height": 34,
-  "spacing": 10,
+  "reload_style_on_change": true,
   "layer": "top",
-  "margin": "6 8 0 8",
+  "position": "top",
+  "spacing": 10,
+  "height": 36,
   "modules-left": ["custom/logo", "custom/seperator", "hyprland/workspaces", "custom/seperator", "mpris"],
   "modules-center": ["hyprland/window"],
   "modules-right": [

@@ -1,9 +1,11 @@
 @define-color text            @fg;
-@define-color background-alt  @bg0;
-@define-color selected        @green;
-@define-color hover           alpha(@selected, .4);
+@define-color background      @bg;
+@define-color background-alt  @bg_alt;
+
+@define-color selected        @nord_blue;   /* primary accent */
+@define-color hover           alpha(@selected, 0.35);
 @define-color urgent          @red;
-@define-color background      @bg0;
+
 * {
   color:            @text;
   all: unset;
@@ -27,11 +29,12 @@
 /* Notifications  */
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
-  background-color: @background-alt;
+  background-color: @bg_module;
   border-radius: 16px;
-  margin: 4px 0px;
+  margin: 4px 0;
   padding: 4px;
 }
+
 .control-center .notification-row .notification-background .notification.critical {
   color: @urgent;
 }

@@ -1,132 +1,155 @@
 @import "colors.css";
+
 * {
   font-family: "JetBrainsMono Nerd Font Propo", "Symbols Nerd Font";
   font-weight: 600;
   font-size: 14px;
-}
-#waybar {
-  background-color: @bg0;
-  border: 1px solid @grey2;
   color: @fg;
-  transition-property: background-color;
-  transition-duration: .5s;
 }
-window#waybar {
-  border-radius: 12px;
+
+#waybar {
+  background-color: alpha(@bg, 0.85);
+  border-bottom: 2px solid alpha(@fg_muted, 1);
+  transition: background-color 0.4s ease;
 }
+
 #waybar button:hover {
-  background-color: alpha(@fg, 0.04);
+  background-color: alpha(@fg, 0.035);
   border-radius: 8px;
 }
+
 .tray-group-item {
-  color: @grey1;
+  color: @fg_dim;
 }
+
 .tray-group-item:hover {
   color: @fg;
 }
+
+#tray {
+  padding: 0 6px;
+  background: transparent;
+}
+
 .modules-left {
   margin-left: 16px;
 }
+
 .modules-right {
   margin-right: 18px;
 }
+
 #workspaces button {
   all: initial;
   padding: 0 6px;
-  margin: 0 1.5px;
+  margin: 0 2px;
   min-width: 9px;
-  color: @grey1;
+  color: @fg_dim;
+  transition: color 0.25s ease;
 }
+
 #workspaces button.active {
-  color: @blue;
+  color: @nord_blue;
 }
+
 #workspaces button:hover {
-  color: @aqua;
+  color: @teal;
 }
+
 #workspaces button.urgent {
   color: @red;
 }
+
 #workspaces button.empty {
-  opacity: 0.5;
+  opacity: 0.45;
 }
+
 #mpris {
   color: @purple;
 }
+
 #mpris.paused {
-  color: @grey1;
+  color: @fg_dim;
 }
+
 #custom-cava {
   color: @purple;
-  opacity: 0.85;
+  opacity: 0.8;
 }
-#clock {
-  background-color: transparent;
-  color: @fg;
-  opacity: 0.9;
-}
+
 #window {
   color: @fg;
   opacity: 0.85;
 }
+
+#clock {
+  padding-left: 6px;
+  color: @fg;
+  opacity: 0.9;
+}
+
 #custom-seperator {
   margin: 0 -4px;
-  color: @grey0;
+  color: @fg_muted;
   opacity: 0.35;
 }
-/* Expand icon */
+
 #custom-expand-icon {
   padding-right: 6px;
   color: @blue;
 }
-/* Tray as a whole */
-#tray {
-  padding: 0 6px;
-}
-/* System toggles */
+
 #custom-brightness,
 #custom-nightlight {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 0 6px;
   color: @yellow;
 }
+
 #power-profiles-daemon {
-  padding-left: 6px;
+  padding: 0 6px;
   color: @green;
 }
+
 #power-profiles-daemon.performance {
   color: @red;
 }
+
 #power-profiles-daemon.power-saver {
-  color: @aqua;
+  color: @teal;
 }
+
 #network {
+  padding-left: 6px;
   color: @blue;
 }
+
 #network.disconnected {
   color: @red;
 }
+
 #bluetooth {
-  color: @aqua;
+  padding-left: 6px;
+  color: @teal;
 }
+
 #bluetooth.disabled {
-  color: @grey1;
+  color: @fg_dim;
 }
+
 #custom-volume {
+  padding-left: 6px;
   color: @orange;
 }
+
 #custom-volume.muted {
-  color: @grey1;
+  color: @fg_dim;
 }
-#custom-brightness {
-  color: @yellow;
-}
-#custom-nightlight {
-  color: @yellow;
-  opacity: 0.9;
-}
+
 #custom-swaync {
+  padding-left: 6px;
   color: @blue;
 }
+
 #custom-swaync.dnd {
   color: @purple;
 }
