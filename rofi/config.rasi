@@ -1,11 +1,6 @@
 configuration {
-	modi:                       "drun,run,filebrowser";
-    show-icons:                 true;
-    display-drun:               " Apps";
-    display-run:                " Run";
-    display-filebrowser:        " Files";
-    display-window:             " Windows";
-	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	modi:                       "run";
+    show-icons:                 false;
 	window-format:              "{w} · {c} · {t}";
 }
 
@@ -78,7 +73,7 @@ inputbar {
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
-    children:                    [ "prompt", "textbox-prompt-colon", "entry" ];
+    children:                    [ "entry" ];
 }
 
 prompt {
