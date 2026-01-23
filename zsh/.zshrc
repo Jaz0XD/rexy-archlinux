@@ -58,10 +58,12 @@ for map in emacs viins vicmd; do
 done
 
 # Aliases
+alias i='yay -S'
 alias ls='colorls'
 alias vim='nvim'
 alias c='clear'
 alias clock='tty-clock -C 7 -c'
+
 
 # Shell integrations
 eval "$(fzf --zsh)"
