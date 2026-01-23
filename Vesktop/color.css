@@ -1,90 +1,107 @@
-@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
 body {
-    --font: 'figtree'; 
-    --code-font: '';
-    font-weight: 400;
-    --gap: 12px; 
-    --divider-thickness: 4px; 
-    --border-thickness: 1px; 
-    --animations: on; 
-    --list-item-transition: 0.2s ease; 
-    --dms-icon-svg-transition: 0.4s ease; 
-    --border-hover-transition: 0.2s ease; 
-    --top-bar-height: var(--gap); 
-    --top-bar-button-position: titlebar; 
-    --top-bar-title-position: off; 
-    --subtle-top-bar-title: off; 
-    --custom-window-controls: on; 
-    --window-control-size: 14px; 
-    --custom-dms-icon: custom; 
-    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg'); 
-    --dms-icon-svg-size: 90%; 
-    --dms-icon-color-before: var(--icon-subtle); 
-    --dms-icon-color-after: var(--white); 
-    --custom-dms-background: off; 
-    --dms-background-image-url: url(''); 
-    --dms-background-image-size: cover; 
-    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); 
-    --background-image: off; 
-    --background-image-url: url(''); 
-    --transparency-tweaks: off; 
-    --remove-bg-layer: off; 
-    --panel-blur: off; 
-    --blur-amount: 12px; 
-    --bg-floating: var(--bg-3); 
-    --custom-chatbar: off; 
-    --chatbar-height: 47px; 
-    --small-user-panel: on; 
+  --font: "figtree";
+  --code-font: "";
+  font-weight: 400;
+  --gap: 12px;
+  --divider-thickness: 4px;
+  --border-thickness: 1px;
+  --animations: on;
+  --list-item-transition: 0.2s ease;
+  --dms-icon-svg-transition: 0.4s ease;
+  --border-hover-transition: 0.2s ease;
+  --top-bar-height: var(--gap);
+  --top-bar-button-position: titlebar;
+  --top-bar-title-position: off;
+  --subtle-top-bar-title: off;
+  --custom-window-controls: on;
+  --window-control-size: 14px;
+  --custom-dms-icon: custom;
+  --dms-icon-svg-url: url("https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg");
+  --dms-icon-svg-size: 90%;
+  --dms-icon-color-before: var(--icon-subtle);
+  --dms-icon-color-after: var(--white);
+  --custom-dms-background: off;
+  --dms-background-image-url: url("");
+  --dms-background-image-size: cover;
+  --dms-background-color: linear-gradient(
+    70deg,
+    var(--blue-2),
+    var(--purple-2),
+    var(--red-2)
+  );
+  --background-image: off;
+  --background-image-url: url("");
+  --transparency-tweaks: off;
+  --remove-bg-layer: off;
+  --panel-blur: off;
+  --blur-amount: 12px;
+  --bg-floating: var(--bg-3);
+  --custom-chatbar: off;
+  --chatbar-height: 47px;
+  --small-user-panel: on;
 }
 :root {
   --colors: on;
-  --text-0: #061115;        
-  --text-1: #D9D7D6;        
-  --text-2: #b4b4b4;        
-  --text-3: #9da9a0;        
-  --text-4: #455054;        
-  --text-5: #4f5a5e;        
-  --bg-1: #061115;          
-  --bg-2: #0d181c;          
-  --bg-3: #131e22;          
-  --bg-4: #1c272b;          
-  --hover:  rgba(90,132,188,0.12);   
-  --active: rgba(90,132,188,0.25);
-  --active-2: rgba(90,132,188,0.35);
-  --message-hover: rgba(255,255,255,0.03);
-  --accent-1: #5A84BC;      
-  --accent-2: #6791C9;      
-  --accent-3: #78B892;      
-  --accent-4: #7ACFE4;      
-  --accent-5: #C488EC;      
+
+  --text-0: #061115;
+  --text-1: #d9d7d6;
+  --text-2: #4f5a5e;
+  --text-3: #313c40;
+  --text-4: #313c40;
+  --text-5: #4f5a5e;
+
+  --bg-1: #061115;
+  --bg-2: #0c171b;
+  --bg-3: #131e22;
+  --bg-4: #1c272b;
+
+  --hover: rgba(90, 132, 188, 0.12);
+  --active: rgba(90, 132, 188, 0.25);
+  --active-2: rgba(90, 132, 188, 0.35);
+
+  --message-hover: rgba(255, 255, 255, 0.03);
+
+  --accent-1: #5a84bc;
+  --accent-2: #6791c9;
+  --accent-3: #78b892;
+  --accent-4: #67afc1;
+  --accent-5: #c488ec;
+
   --accent-new: var(--accent-2);
+
   --mention: linear-gradient(
     to right,
-    rgba(90,132,188,0.25) 40%,
+    rgba(90, 132, 188, 0.25) 40%,
     transparent
   );
+
   --mention-hover: linear-gradient(
     to right,
-    rgba(90,132,188,0.35) 40%,
+    rgba(90, 132, 188, 0.35) 40%,
     transparent
   );
+
   --reply: linear-gradient(
     to right,
-    rgba(217,215,214,0.15) 40%,
+    rgba(217, 215, 214, 0.15) 40%,
     transparent
   );
+
   --reply-hover: linear-gradient(
     to right,
-    rgba(217,215,214,0.25) 40%,
+    rgba(217, 215, 214, 0.25) 40%,
     transparent
   );
-  --online:     #78B892;    
-  --idle:       #ecd28b;    
-  --dnd:        #DF5B61;    
-  --streaming:  #6791C9;    
-  --offline:    #455054;    
-  --border-light: rgba(255,255,255,0.05);
-  --border:       rgba(255,255,255,0.08);
-  --border-hover: rgba(255,255,255,0.12);
-  --button-border: rgba(255,255,255,0.08);
+
+  --online: #78b892;
+  --idle: #ecd28b;
+  --dnd: #df5b61;
+  --streaming: #6791c9;
+  --offline: #313c40;
+
+  --border-light: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --button-border: rgba(255, 255, 255, 0.08);
 }

@@ -1,7 +1,7 @@
 configuration {
 	modi:                       "run";
     show-icons:                 false;
-	window-format:              "{w} · {c} · {t}";
+	  window-format:              "{w} · {c} · {t}";
 }
 
 @import                          "colors.rasi"
