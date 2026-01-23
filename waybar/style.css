@@ -83,6 +83,7 @@
 }
 
 #clock {
+  padding-top: 2px;
   padding-left: 6px;
   color: @yellow;
   opacity: 0.95;
