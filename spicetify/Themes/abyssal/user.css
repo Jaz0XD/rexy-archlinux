@@ -1,0 +1,99 @@
+/* ============================
+   ABYSSAL – COLOR FIDELITY FIX
+   ============================ */
+
+/* 1. Force true base backgrounds */
+:root {
+  --tracklist-gradient-opacity: 0.25;
+  --image-blur: 2px;
+  --tracklist-gradient-noise: none;
+}
+
+/* Main view background */
+.Root__main-view {
+  background-color: var(--spice-main) !important;
+}
+
+/* Sidebar */
+.Root__nav-bar {
+  background-color: var(--spice-sidebar) !important;
+}
+
+/* Player bar */
+.Root__now-playing-bar {
+  background-color: var(--spice-player) !important;
+}
+
+/* 2. Fix gradient logic (preserve depth, not tint) */
+#main.Banner-Enabled
+.artist-artistOverview-artistOverviewContent,
+#main.Banner-Enabled
+.main-actionBarBackground-background {
+  background-image: linear-gradient(
+    var(--spice-main-transition) 0px,
+    var(--spice-main) var(--tracklist-gradient-height)
+  ) !important;
+
+  background-color: var(--spice-main) !important;
+}
+
+/* Remove stacked noise layers */
+#main.Banner-Enabled
+.artist-artistOverview-artistOverviewContent::before,
+#main.Banner-Enabled
+.main-actionBarBackground-background::before {
+  content: none !important;
+}
+
+/* 3. Cards: restore proper elevation contrast */
+.main-card-card {
+  background-color: var(--spice-card) !important;
+}
+
+.main-card-card:hover {
+  background-color: var(--spice-highlight-elevated) !important;
+}
+
+/* 4. Tracklist rows (accurate selection color) */
+.main-trackList-trackListRow {
+  background-color: transparent;
+  border-radius: var(--border-radius);
+}
+
+.main-trackList-trackListRow:hover {
+  background-color: rgba(var(--spice-rgb-selected-row), 0.06);
+}
+
+.main-trackList-trackListRow.main-trackList-selected {
+  background-color: rgba(var(--spice-rgb-selected-row), 0.12);
+}
+
+/* 5. Topbar – remove hidden tinting */
+.main-topBar-background {
+  background-color: var(--spice-main) !important;
+}
+
+.main-topBar-overlay {
+  background-color: transparent !important;
+}
+
+/* 6. Modals & menus – prevent grey wash */
+.GenericModal__overlay,
+#context-menu,
+#bookmark-menu {
+  background-color: var(--spice-player) !important;
+}
+
+/* 7. Kill accidental alpha inheritance */
+[class*="background"],
+[class*="overlay"] {
+  backdrop-filter: none !important;
+}
+.Root__main-view,
+.Root__nav-bar,
+.Root__now-playing-bar,
+.Root__top-container {
+  opacity: 1 !important;
+  filter: none !important;
+  background-image: none !important;
+}
