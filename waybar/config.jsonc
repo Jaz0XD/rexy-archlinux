@@ -55,7 +55,7 @@
     "modules": [
       "custom/expand-icon",
       "tray",
-      "volume",
+      "custom/volume",
       "network",
       "custom/brightness",
       "custom/nightlight",

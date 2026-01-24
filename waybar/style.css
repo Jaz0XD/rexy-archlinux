@@ -93,7 +93,7 @@
 }
 
 #custom-expand-icon {
-  padding-right: 6px;
+  padding: 0 6px;
   color: @nord_blue;
 }
 
@@ -121,7 +121,7 @@
 }
 
 #network {
-  padding-left: 6px;
+  padding: 0 6px;
   color: @blue;
 }
 
@@ -130,7 +130,7 @@
 }
 
 #bluetooth {
-  padding-left: 6px;
+  padding: 0 6px;
   color: @teal;
 }
 
@@ -139,7 +139,7 @@
 }
 
 #custom-volume {
-  padding-left: 6px;
+  padding: 0 6px;
   color: @orange;
 }
 
@@ -148,7 +148,7 @@
 }
 
 #custom-swaync {
-  padding-left: 6px;
+  padding: 0 6px;
   color: @nord_blue;
 }
 
