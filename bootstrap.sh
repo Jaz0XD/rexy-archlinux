@@ -83,9 +83,6 @@ source "$BASE_DIR/modules/zsh.sh"
 source "$BASE_DIR/modules/stow.sh"
 source "$BASE_DIR/modules/monitors.sh"
 source "$BASE_DIR/modules/bin.sh"
-if [[ "$MACHINE_TYPE" == "desktop" ]]; then
-    source "$BASE_DIR/modules/fstab.sh"
-fi
 source "$BASE_DIR/modules/ascii.sh"
 source "$BASE_DIR/modules/reboot.sh"
 
@@ -139,16 +136,6 @@ generate_monitors_conf
 # -----------------------------------------------
 info "Linking dotfiles executables..."
 install_local_bin
-
-# -----------------------------------------------
-# FSTAB ENTRY (DESKTOP ONLY)
-# -----------------------------------------------
-if [[ "$MACHINE_TYPE" == "desktop" ]]; then
-    info "Updating fstab..."
-    update_fstab
-else
-    ok "Skipping fstab setup (laptop detected)."
-fi
 
 # -----------------------------------------------
 # ASCII ART FINISH
