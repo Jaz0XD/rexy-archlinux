@@ -35,22 +35,21 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # ---- Syntax highlighting colors (your theme) ----
-ZSH_HIGHLIGHT_STYLES[command]="fg=#B07A78"        # commands (cd, ls)
-ZSH_HIGHLIGHT_STYLES[builtin]="fg=#B07A78"
-ZSH_HIGHLIGHT_STYLES[function]="fg=#B07A78"
+ZSH_HIGHLIGHT_STYLES[command]="fg=#f38ba8"
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=#f38ba8"
+ZSH_HIGHLIGHT_STYLES[function]="fg=#f38ba8"
 
-ZSH_HIGHLIGHT_STYLES[path]="fg=#E6E3DE"
-ZSH_HIGHLIGHT_STYLES[arg]="fg=#E6E3DE"
+ZSH_HIGHLIGHT_STYLES[path]="fg=#d4d9eb"
+ZSH_HIGHLIGHT_STYLES[arg]="fg=#d4d9eb"
+ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=#d4d9eb"
 
-ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=#E6E3DE"
+ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=#ff6b6b,bold"
+ZSH_HIGHLIGHT_STYLES[error]="fg=#ff6b6b,bold"
 
-ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=#CFA3A0,bold"
-ZSH_HIGHLIGHT_STYLES[error]="fg=#CFA3A0,bold"
+ZSH_HIGHLIGHT_STYLES[quoted]="fg=#ffd16d"
+ZSH_HIGHLIGHT_STYLES[string]="fg=#ffd16d"
 
-ZSH_HIGHLIGHT_STYLES[quoted]="fg=#CFA3A0"
-ZSH_HIGHLIGHT_STYLES[string]="fg=#CFA3A0"
-
-ZSH_HIGHLIGHT_STYLES[comment]="fg=#7A7671"
+ZSH_HIGHLIGHT_STYLES[comment]="fg=#8f929e"
 
 # Fix Delete key across all zsh keymaps
 for map in emacs viins vicmd; do
@@ -69,7 +68,7 @@ alias clock='tty-clock -C 7 -c'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(starship init zsh)"
+eval "$(oh-my-posh init zsh --config ~/dotfiles/oh-my-posh/abyssal.omp.json)"
 
 export EDITOR=nvim
 

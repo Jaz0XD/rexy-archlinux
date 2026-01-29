@@ -1,19 +1,117 @@
-"$schema" = "https://starship.rs/config-schema.json"
+"$schema" = 'https://starship.rs/config-schema.json'
 
-# Only show directory + prompt symbol
 format = """
-$directory
-$character
-"""
+[](abyssal_red)\
+$os\
+$username\
+[](bg:abyssal_orange fg:abyssal_red)\
+$directory\
+[](bg:abyssal_yellow fg:abyssal_orange)\
+$git_branch\
+$git_status\
+[](fg:abyssal_yellow bg:abyssal_teal)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:abyssal_teal bg:abyssal_blue)\
+$conda\
+[](fg:abyssal_blue bg:abyssal_lavender)\
+$time\
+[ ](fg:abyssal_lavender)\
+$cmd_duration\
+$line_break\
+$character"""
 
-# ---------------- DIRECTORY ----------------
+palette = 'abyssal'
+
+[os]
+disabled = false
+style = "bg:abyssal_red fg:abyssal_bg_dark"
+
+[username]
+show_always = true
+style_user = "bg:abyssal_red fg:abyssal_bg_dark"
+style_root = "bg:abyssal_red fg:abyssal_bg_dark"
+format = '[ $user]($style)'
+
 [directory]
-style = "fg:#E6E3DE"
-format = "$path"
+style = "bg:abyssal_orange fg:abyssal_bg_dark"
+format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
-# ---------------- PROMPT CHARACTER ----------------
+[git_branch]
+symbol = ""
+style = "bg:abyssal_yellow"
+format = '[[ $symbol $branch ](fg:abyssal_bg_dark bg:abyssal_yellow)]($style)'
+
+[git_status]
+style = "bg:abyssal_yellow"
+format = '[[($all_status$ahead_behind )](fg:abyssal_bg_dark bg:abyssal_yellow)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:abyssal_teal"
+format = '[[ $symbol( $version) ](fg:abyssal_bg_dark bg:abyssal_teal)]($style)'
+
+[c]
+symbol = " "
+style = "bg:abyssal_teal"
+format = '[[ $symbol( $version) ](fg:abyssal_bg_dark bg:abyssal_teal)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:abyssal_teal"
+format = '[[ $symbol( $version) ](fg:abyssal_bg_dark bg:abyssal_teal)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:abyssal_teal"
+format = '[[ $symbol( $version) ](fg:abyssal_bg_dark bg:abyssal_teal)]($style)'
+
+[python]
+symbol = ""
+style = "bg:abyssal_teal"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:abyssal_bg_dark bg:abyssal_teal)]($style)'
+
+[conda]
+symbol = "  "
+style = "fg:abyssal_bg_dark bg:abyssal_blue"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:abyssal_lavender"
+format = '[[  $time ](fg:abyssal_bg_dark bg:abyssal_lavender)]($style)'
+
 [character]
-success_symbol = "[❯](fg:#B07A78)"
-error_symbol   = "[❯](fg:#CFA3A0)"
+success_symbol = '[❯](bold fg:abyssal_teal)'
+error_symbol = '[❯](bold fg:abyssal_red)'
+vimcmd_symbol = '[❮](bold fg:abyssal_teal)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:abyssal_lavender"
+disabled = false
+
+[palettes.abyssal]
+abyssal_red = "#f38ba8"
+abyssal_orange = "#ffd16d"
+abyssal_yellow = "#ffdf8e"
+abyssal_teal = "#3fdad8"
+abyssal_blue = "#448fff"
+abyssal_lavender = "#b4befe"
+abyssal_text = "#d4d9eb"
+abyssal_subtext = "#8f929e"
+abyssal_surface = "#2d353b"
+abyssal_bg = "#1f2428"
+abyssal_bg_dark = "#0f1419"
