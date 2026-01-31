@@ -76,6 +76,7 @@ export PATH="$PATH:/home/aman/.dotnet/tools"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=$PATH:~/.spicetify
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
+export PATH="$PATH:$HOME/flutter/bin"
 
 #Yazi
 
