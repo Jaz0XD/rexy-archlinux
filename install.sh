@@ -1,64 +1,81 @@
-#!/bin/sh
-# Rex OS one-line installer
-# Usage:
+#!/bin/bash
 #   sh -c "$(curl -fsSL https://raw.githubusercontent.com/zen0x/rex-os/main/install.sh)"
-
 set -e
 
-REPO_URL="https://github.com/amankumarmatta/rexium.git"
-INSTALL_DIR="$HOME/rexium"
-BOOTSTRAP="$INSTALL_DIR/bootstrap.sh"
+export TERM=xterm
 
-echo "🦖 Rex OS Installer"
-echo "==================="
+read -rp "EFI disk (e.g. /dev/nvme0n1): " EFIDISK
+read -rp "Root disk (e.g. /dev/nvme0n1p2): " ROOTPART
+read -rp "Second disk (e.g. /dev/nvme1n1): " SECONDDISK
+read -rp "Hostname: " HOSTNAME
+read -rp "Username: " USERNAME
+read -rp "Timezone (e.g. Asia/Kolkata): " TIMEZONE
 
-# --------------------------------------------------
-# Safety checks
-# --------------------------------------------------
+mkfs.fat -F32 "${EFIDISK}p1"
 
-if [ "$(id -u)" -eq 0 ]; then
-  echo "❌ Do not run this installer as root."
-  exit 1
-fi
+mkfs.btrfs -f -L archpool "$ROOTPART"
+mount "$ROOTPART" /mnt
 
-command -v curl >/dev/null 2>&1 || {
-  echo "❌ curl is required but not installed."
-  exit 1
-}
+btrfs device add "$SECONDDISK" /mnt
 
-command -v git >/dev/null 2>&1 || {
-  echo "❌ git is required but not installed."
-  exit 1
-}
+btrfs subvolume create /mnt/@root
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@snapshots
+btrfs subvolume create /mnt/@var
+btrfs subvolume create /mnt/@log
 
-# --------------------------------------------------
-# Clone or update repo
-# --------------------------------------------------
+umount /mnt
 
-if [ ! -d "$INSTALL_DIR/.git" ]; then
-  echo "📥 Cloning Rex OS repository..."
-  git clone --depth=1 "$REPO_URL" "$INSTALL_DIR"
-else
-  echo "🔄 Rex OS already installed — updating..."
-  git -C "$INSTALL_DIR" pull --ff-only
-fi
+mount -o subvol=@root,compress=zstd,noatime LABEL=archpool /mnt
+mkdir -p /mnt/{home,.snapshots,var,var/log,boot}
+mount -o subvol=@home,compress=zstd,noatime LABEL=archpool /mnt/home
+mount -o subvol=@snapshots,compress=zstd,noatime LABEL=archpool /mnt/.snapshots
+mount -o subvol=@var,compress=zstd,noatime LABEL=archpool /mnt/var
+mkdir -p /mnt/var/log
+mount -o subvol=@log,compress=zstd,noatime LABEL=archpool /mnt/var/log
+mount "${EFIDISK}p1" /mnt/boot
 
-# --------------------------------------------------
-# Verify bootstrap script
-# --------------------------------------------------
+pacstrap -K /mnt base linux-zen linux-zen-headers linux-firmware btrfs-progs networkmanager
 
-if [ ! -x "$BOOTSTRAP" ]; then
-  echo "🔧 Making bootstrap executable..."
-  chmod +x "$BOOTSTRAP"
-fi
+genfstab -U /mnt >> /mnt/etc/fstab
 
-# --------------------------------------------------
-# Hand over control to the real installer
-# --------------------------------------------------
+arch-chroot /mnt /bin/bash <<EOF
+ln -sf /usr/share/zoneinfo/$TIMEZONE /etc/localtime
+hwclock --systohc
 
-echo
-echo "🚀 Launching Rex OS bootstrap..."
-echo
+sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
-cd "$INSTALL_DIR"
-exec "$BOOTSTRAP"
+echo "$HOSTNAME" > /etc/hostname
+
+useradd -m -G wheel $USERNAME
+passwd $USERNAME
+passwd
+
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+
+bootctl install
+
+UUID=$(blkid -s UUID -o value "$ROOTPART")
+
+cat > /boot/loader/entries/arch-zen.conf <<BOOT
+title Arch Linux (Zen)
+linux /vmlinuz-linux-zen
+initrd /initramfs-linux-zen.img
+options root=UUID=$UUID rootflags=subvol=@root rw
+BOOT
+
+cat > /boot/loader/loader.conf <<LOADER
+default arch-zen
+timeout 3
+LOADER
+
+systemctl enable NetworkManager
+
+echo "KEYMAP=us" > /etc/vconsole.conf
+
+mkinitcpio -P
+EOF
+
+echo "Installation complete. You can reboot now."
