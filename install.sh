@@ -16,7 +16,7 @@ mkfs.fat -F32 "${EFIDISK}p1"
 mkfs.btrfs -f -L archpool "$ROOTPART"
 mount "$ROOTPART" /mnt
 
-btrfs device add "$SECONDDISK" /mnt
+btrfs device add -f "$SECONDDISK" /mnt
 
 btrfs subvolume create /mnt/@root
 btrfs subvolume create /mnt/@home
