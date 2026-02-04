@@ -8,9 +8,9 @@ generate_monitors_conf() {
     mkdir -p "$HYPR_CONF_DIR"
 
     if [[ "$MACHINE_TYPE" == "desktop" ]]; then
-        MONITOR_LINE="monitor=DP-1,1920x1080@300.00,0x0,1,bitdepth,10"
+        MONITOR_LINE="monitor=DP-1,1920x1080@300,0x0,1"
     else
-        MONITOR_LINE="monitor=eDP-1,1920x1080@144.00,0x0,1"
+        MONITOR_LINE="monitor=eDP-1,1920x1080@144,0x0,1"
     fi
 
     sed "s|{{MONITOR_LINE}}|$MONITOR_LINE|" "$TEMPLATE" > "$TARGET"
