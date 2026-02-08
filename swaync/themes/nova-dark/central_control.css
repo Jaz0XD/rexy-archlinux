@@ -19,7 +19,7 @@
 }
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 .control-center {
-  background: @background;
+  background: alpha(@background, 0.85);
   border-radius: 12px;
   border: 1px solid @selected;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);

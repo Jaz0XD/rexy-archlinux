@@ -14,7 +14,8 @@
     "group/tray-expander",
     "custom/volume",
     "network",
-    "clock"
+    "clock",
+    "custom/swaync"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",

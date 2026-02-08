@@ -9,10 +9,11 @@
 @define-color fg_muted  #313C40;
 
 @define-color red       #DF5B61;
-@define-color orange    #E89982;
-@define-color yellow    #ECD28B;
 @define-color green     #78B892;
-@define-color teal      #67AFC1;
 @define-color blue      #6791C9;
-@define-color nord_blue #5A84BC;
+@define-color nord_blue #6791C9;
+
+@define-color teal      #67AFC1;
+@define-color yellow    #ECD28B;
+@define-color orange    #E89982;
 @define-color purple    #C488EC;

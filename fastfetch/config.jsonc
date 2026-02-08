@@ -86,6 +86,12 @@
       "key": "   Battery    ",
       "keyColor": "#E89982",
     },
+    {
+    "type": "command",
+    "key": "  󰔟 OS Age     ",
+    "keyColor": "31",
+    "text": "birth_install=$(stat -c %W /); current=$(date +%s); days_difference=$(( (current - birth_install) / 86400 )); echo $days_difference days"
+     },
 
     "break",
   ],
