@@ -1,0 +1,19 @@
+@define-color bg        #061115;
+@define-color bg_alt    #0C171B;
+@define-color bg_module #131E22;
+@define-color bg_hover  #1C272B;
+@define-color bg_active #242F33;
+
+@define-color fg        #D9D7D6;
+@define-color fg_dim    #4F5A5E;
+@define-color fg_muted  #313C40;
+
+@define-color red       #FFB3BA;
+@define-color green     #78B892;
+@define-color blue      #6791C9;
+@define-color nord_blue #6791C9;
+@define-color bisque    #FFE4C4;
+@define-color teal      #67AFC1;
+@define-color yellow    #ECD28B;
+@define-color orange    #E89982;
+@define-color purple    #C488EC;

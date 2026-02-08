@@ -52,6 +52,13 @@
   border-radius: 12px;
 }
 
+window#waybar.empty #window {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 #workspaces {
   background-color: alpha(@bg, 0.75);
   border: 2px solid alpha(@fg_muted, 0.6);
