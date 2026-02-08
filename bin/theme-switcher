@@ -1,0 +1,15 @@
+#!/bin/bash
+THEMES="$HOME/.config/themes"
+CFG="$HOME/.config"
+THEME=$(ls "$THEMES" | rofi -dmenu -p "Theme")
+[ -z "$THEME" ] && exit
+
+ln -sf "$THEMES/$THEME/waybar/colors.css" "$CFG/waybar/colors.css"
+
+awww img "$THEMES/$THEME/wallpaper.jpg" --transition-type grow --transition-duration 1 --transition-fps 60
+
+pkill waybar
+pkill swaync
+waybar &
+swaync &
+hyprctl reload
