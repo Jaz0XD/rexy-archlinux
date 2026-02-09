@@ -7,7 +7,7 @@ install_aur_packages() {
         notify-send thunar nwg-look steam neovim openrgb fzf lazygit sddm starship treesitter-cli ani-cli
         sddm-silent-theme zoxide ttf-jetbrains-mono-nerd gamemode lib32-gamemode localsend idescriptor-git
         ttf-ibm-plex ttf-roboto noto-fonts spotify spicetify-cli mangohud ttf-gohu-nerd sunset-cursors-git
-        zen-browser-bin ttf-twemoji discord hyprshot obs-studio obs-vkcapture obs-pipewire-audio-capture swayosd yaru-icon-theme gtk-engine-murrine
+        zen-browser-bin ttf-twemoji discord hyprshot obs-studio obs-vkcapture obs-pipewire-audio-capture swayosd abyssal-gtk-theme gtk-engine-murrine
         )
 
     local to_install=()
