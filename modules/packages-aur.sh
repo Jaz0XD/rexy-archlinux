@@ -2,12 +2,72 @@
 
 install_aur_packages() {
     local packages=(
-        impala tuned hyprsunset tuned-ppd wiremix rofi-wayland bluetui hyprland xdg-desktop-portal-hyprland kitty awww-git hyprlock swaync
-        waybar quickshell fastfetch zsh stow bc jq ffmpeg imagemagick yad hypridle wlogout
-        notify-send nautilus nwg-look steam neovim openrgb fzf lazygit sddm starship treesitter-cli ani-cli
-        sddm-silent-theme zoxide ttf-jetbrains-mono-nerd gamemode lib32-gamemode localsend idescriptor-git
-        ttf-ibm-plex ttf-roboto noto-fonts spotify spicetify-cli mangohud ttf-gohu-nerd sunset-cursors-git
-        zen-browser-bin ttf-twemoji discord hyprshot obs-studio obs-vkcapture obs-pipewire-audio-capture swayosd abyssal-gtk-theme gtk-engine-murrine
+        abyssal-gtk-theme
+        ani-cli
+        awww-git
+        bc
+        bluetui
+        cpupower
+        discord
+        ffmpeg
+        fastfetch
+        fzf
+        gamemode
+        gtk-engine-murrine
+        hyprland
+        hypridle
+        hyprlock
+        hyprshot
+        hyprsunset
+        idescriptor-git
+        impala
+        imagemagick
+        irqbalance
+        jq
+        kitty
+        lazygit
+        lib32-gamemode
+        localsend
+        mangohud
+        nautilus
+        neovim
+        notify-send
+        noto-fonts
+        nwg-look
+        obs-pipewire-audio-capture
+        obs-studio
+        obs-vkcapture
+        openrgb
+        preload
+        quickshell
+        rofi-wayland
+        scx-scheds
+        sddm
+        sddm-silent-theme
+        spicetify-cli
+        spotify
+        starship
+        steam
+        stow
+        sunset-cursors-git
+        swaync
+        swayosd
+        treesitter-cli
+        ttf-gohu-nerd
+        ttf-ibm-plex
+        ttf-jetbrains-mono-nerd
+        ttf-roboto
+        ttf-twemoji
+        tuned
+        tuned-ppd
+        waybar
+        wiremix
+        wlogout
+        xdg-desktop-portal-hyprland
+        yad
+        zram-generator
+        zen-browser-bin
+        zoxide
         )
 
     local to_install=()

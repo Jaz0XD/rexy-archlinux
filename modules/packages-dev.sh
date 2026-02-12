@@ -2,8 +2,26 @@
 
 install_dev_packages() {
     local packages=(
-        python python-pip go dotnet-sdk gcc clang cmake make ninja gdb lldb perf docker docker-compose
-        git-lfs github-cli mono unityhub visual-studio-code-bin ruby
+        clang
+        cmake
+        docker
+        docker-compose
+        dotnet-sdk
+        gdb
+        gcc
+        git-lfs
+        github-cli
+        go
+        lldb
+        make
+        mono
+        ninja
+        perf
+        python
+        python-pip
+        ruby
+        unityhub
+        visual-studio-code-bin
     )
 
     local to_install=()

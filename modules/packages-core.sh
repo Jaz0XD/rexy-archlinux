@@ -3,33 +3,54 @@
 install_core_packages() {
 
     local packages=(
-        # --- Original core packages ---
-        ntfs-3g uwsm gnome-keyring noto-fonts-cjk noto-fonts noto-fonts-extra
-        noto-fonts-emoji libsecret seahorse efibootmgr os-prober vulkan-icd-loader lib32-vulkan-icd-loader
-        bluez bluez-utils
-
-        # --- Added System Utilities ---
-        brightnessctl pavucontrol playerctl
-        wl-clipboard cliphist
-        networkmanager network-manager-applet
-        gvfs gvfs-mtp
-
-        # --- Added Appearance / QT / Theming ---
-        qt5-base qt6-base
-        qt5-wayland qt6-wayland
-        qt5ct lxappearance sassc
-
-        # --- Networking / Connectivity ---
-        openssh rsync wget curl ufw
-
-        # --- Archive / Compression Tools ---
-        zip unzip p7zip gzip tar
-
-        # --- System Cleaning Tools ---
-        ncdu bleachbit duf dust
-
-        # --- Workflow Tools ---
-        bat ripgrep fd btop
+        bat
+        bleachbit
+        bluez
+        bluez-utils
+        btop
+        brightnessctl
+        cliphist
+        curl
+        duf
+        dust
+        efibootmgr
+        fd
+        gnome-keyring
+        gvfs
+        gvfs-mtp
+        gzip
+        lib32-vulkan-icd-loader
+        libsecret
+        lxappearance
+        ncdu
+        network-manager-applet
+        networkmanager
+        noto-fonts
+        noto-fonts-cjk
+        noto-fonts-emoji
+        noto-fonts-extra
+        ntfs-3g
+        openssh
+        os-prober
+        p7zip
+        pavucontrol
+        playerctl
+        qt5-base
+        qt5-wayland
+        qt5ct
+        qt6-base
+        qt6-wayland
+        ripgrep
+        rsync
+        sassc
+        tar
+        ufw
+        unzip
+        uwsm
+        vulkan-icd-loader
+        wget
+        wl-clipboard
+        zip
     )
 
     local to_install=()
