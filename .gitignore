@@ -2,3 +2,4 @@
 hypr/configs/monitors.conf
 hypr/configs/colors.conf
 nvim/lua/plugins/colorscheme.lua
+walker/themes/colors.css

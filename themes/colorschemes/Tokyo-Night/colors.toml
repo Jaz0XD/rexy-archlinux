@@ -1,24 +1,12 @@
-# =========================
-# Background scale
-# =========================
-
 bg0 = "#1a1b26"
 bg1 = "#32344a"
 bg2 = "#444b6a"
 bg3 = "#2a2e45"
 bg4 = "#3b4261"
 
-# =========================
-# Foreground scale
-# =========================
-
 fg0 = "#a9b1d6"
 fg1 = "#787c99"
 fg2 = "#565f89"
-
-# =========================
-# Semantic
-# =========================
 
 accent = "#7aa2f7"
 
@@ -28,8 +16,6 @@ yellow = "#e0af68"
 blue   = "#7aa2f7"
 cyan   = "#449dab"
 purple = "#ad8ee6"
-
-# Optional (recommended for fidelity)
 
 orange = "#ff9e64"
 cursor = "#c0caf5"
