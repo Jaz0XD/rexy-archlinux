@@ -10,6 +10,7 @@ install_aur_packages() {
         blender
         bluetui
         brave-bin
+        bridge-utils
         cpupower
         elephant
         elephant-desktopapplications
@@ -69,6 +70,8 @@ install_aur_packages() {
         vesktop
         walker
         waybar
+        wine
+        winetricks
         wiremix
         wlogout
         xdg-desktop-portal-hyprland

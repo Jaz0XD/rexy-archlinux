@@ -10,6 +10,8 @@ install_core_packages() {
         brightnessctl
         cliphist
         curl
+        dnsmasq
+        edk2-ovmf
         fd
         gnome-keyring
         gvfs
@@ -24,11 +26,17 @@ install_core_packages() {
         noto-fonts-emoji
         noto-fonts-extra
         ntfs-3g
+        openbsd-netcat
         openssh
         os-prober
         p7zip
         pavucontrol
+        pipewire
+        pipewire-pulse
+        pipewire-alsa
+        pipewire-jack
         playerctl
+        qemu-full
         qt5-base
         qt5-wayland
         qt5ct
@@ -49,7 +57,11 @@ install_core_packages() {
         ufw
         unzip
         uwsm
+        vde2
+        virt-manager
+        virt-viewer
         vulkan-icd-loader
+        wireplumber
         wget
         wl-clipboard
         zip

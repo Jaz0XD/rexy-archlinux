@@ -4,9 +4,9 @@ set -e
 
 export TERM=xterm
 
-read -rp "EFI disk (e.g. /dev/nvme0n1): " EFIDISK
-read -rp "Root partition (e.g. /dev/nvme0n1p2): " ROOTPART
-read -rp "Second disk (e.g. /dev/nvme1n1): " SECONDDISK
+read -rp "EFI disk: " EFIDISK
+read -rp "Root partition: " ROOTPART
+read -rp "Second disk: " SECONDDISK
 read -rp "Hostname: " HOSTNAME
 read -rp "Username: " USERNAME
 read -rp "Timezone (e.g. Asia/Kolkata): " TIMEZONE
@@ -51,7 +51,7 @@ mount -o subvol=@snapshots,compress=zstd,noatime LABEL=archpool /mnt/.snapshots
 mount -o subvol=@var,compress=zstd,noatime LABEL=archpool /mnt/var
 mount "${EFIDISK}p1" /mnt/boot
 
-pacstrap -K /mnt base linux-zen linux-zen-headers linux-firmware btrfs-progs networkmanager sudo pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+pacstrap -K /mnt base linux-zen linux-zen-headers linux-firmware btrfs-progs networkmanager sudo
 
 genfstab -U /mnt > /mnt/etc/fstab
 
